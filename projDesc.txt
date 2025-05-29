@@ -1,0 +1,13 @@
+Objetivo: criar uma api restfull para registrar ARTEFATOS
+
+Modelo: OK
+    Artifact: id, name, description, universe e rarity
+
+Repositório de artefatos: OK
+    getAll, getById, addArt, uptadeArt e deleteArt
+
+Serviço de artefatos: Falta businness rules
+    getAll, getById, addArt, uptadeArt e deleteArt
+
+Controller de artefatos: OK
+    get_all, get_artifact, add_artifact, update_artifact e delete_artifact
