@@ -1,13 +1,13 @@
 package com.product.arti_fact.repository;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
 import com.product.arti_fact.model.Artifact;
+import com.product.arti_fact.model.exception.ResourceNotFoundException;
 
 @Repository
 public class ArtifactRepository {
@@ -72,7 +72,7 @@ public class ArtifactRepository {
         // search for the product
         Optional<Artifact> foundArtifact = getById(artifact.getId());
         if (foundArtifact.isEmpty()) {
-            throw new InputMismatchException("Production not found!");
+            throw new ResourceNotFoundException("Artifact not found!");
         }
 
         // remove the old one
