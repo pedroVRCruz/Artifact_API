@@ -31,10 +31,14 @@ public class ArtifactRepository {
      * @return Return an artefact if found one
      */
     public Optional<Artifact> getById(Integer id) {
-        return artifacts
+        Optional<Artifact> artifact = artifacts
                 .stream()
-                .filter(artifact -> artifact.getId() == id)
+                .filter(a -> a.getId() == id)
                 .findFirst();
+        if (artifact.isEmpty()) {
+            throw new ResourceNotFoundException("There's no artifact with this id!");
+        }
+        return artifact;
     }
 
     /**

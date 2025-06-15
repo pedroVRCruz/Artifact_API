@@ -13,3 +13,4 @@ Controller de artefatos: OK
     get_all, get_artifact, add_artifact, update_artifact e delete_artifact
 
 Handlers de erros: 
+ - exception not found
